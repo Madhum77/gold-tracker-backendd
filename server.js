@@ -7,9 +7,10 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors());
-app.use(express.json());
-
+app.use(cors({
+    origin: 'https://gold-tracker-frontend-wheat.vercel.app',
+    credentials: true
+}));
 // ==================== IN-MEMORY STORAGE (NO DATABASE NEEDED) ====================
 let goldRates = [];
 let alerts = [];
