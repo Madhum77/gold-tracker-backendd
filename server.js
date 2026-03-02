@@ -139,11 +139,10 @@ app.get('/api/prediction', (req, res) => {
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.EMAIL_USER || 'test@example.com',
-        pass: process.env.EMAIL_PASS || 'password'
+        user: 'madhhuuu10@gmail.com',
+        pass: 'YOUR-16-CHARACTER-APP-PASSWORD' // Paste the password WITHOUT spaces
     }
 });
-
 // ==================== BACKGROUND JOBS ====================
 
 // Update rates every hour
